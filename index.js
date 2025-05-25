@@ -1,16 +1,17 @@
 const express = require('express');
+const cors = require('cors'); // Importa el paquete cors
 const app = express();
 const path = require('path');
 require("dotenv").config({ path: path.resolve(__dirname, "../.env") });
 const xmlparser = require('express-xml-bodyparser');
 const swaggerJsdoc = require('swagger-jsdoc');
-//const redoc = require('redoc-express');
 const swaggerOptions = require('./docs/swaggerOptions');
 const swaggerSpec = swaggerJsdoc(swaggerOptions);
 const swaggerUi = require('swagger-ui-express');
 
 const peliculaRouter = require('./routes/peliculaRouter');
 
+app.use(cors());
 app.use(express.json());
 app.use(xmlparser());
 app.use('/peliculas', peliculaRouter);
