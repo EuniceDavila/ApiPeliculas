@@ -8,7 +8,7 @@ module.exports = {
       version: '1.0.0',
       description: 'CRUD de películas populares'
     },
-    servers: [{ url: 'http://localhost:3000' }],
+    servers: [{ url: 'https://apipeliculas-production.up.railway.app' }],
     tags: [
       {
         name: 'Películas',
