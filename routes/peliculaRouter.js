@@ -113,12 +113,16 @@ router.get('/:id', [param('id').isInt().withMessage('El ID debe ser un número e
  *             properties:
  *               titulo:
  *                 type: string
+ *                 example: "Inception"  
  *               autor:
  *                 type: string
+ *                 example: "Christopher Nolan" 
  *               anio_estreno:
  *                 type: integer
+ *                 example: 2010  
  *               categoria:
  *                 type: string
+ *                 example: "Ciencia Ficción"  
  *     responses:
  *       201:
  *         description: Película creada exitosamente
@@ -162,12 +166,16 @@ router.post(
  *             properties:
  *               titulo:
  *                 type: string
+ *                 example: "Inception"  
  *               autor:
  *                 type: string
+ *                 example: "Christopher Nolan" 
  *               anio_estreno:
  *                 type: integer
+ *                 example: 2010  
  *               categoria:
  *                 type: string
+ *                 example: "Ciencia Ficción"  
  *     responses:
  *       200:
  *         description: Película actualizada
